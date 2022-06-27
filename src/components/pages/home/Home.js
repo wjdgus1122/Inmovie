@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 import { movieApi } from "../../../api";
 import { mainStyle } from "../../../styles/globalStyle";
+import { Loading } from "../../Loading";
 
 const MainBanner = styled.section`
   height: 80vh;
@@ -67,7 +68,7 @@ export const Home = () => {
   return (
     <>
       {loading ? (
-        "LOADING..."
+        <Loading />
       ) : (
         <>
           {playing && (
