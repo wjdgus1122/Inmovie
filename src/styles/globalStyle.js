@@ -6,6 +6,7 @@ export const mainStyle = {
   color: "white",
   maingColor: "crimson",
   padding: "0 80px",
+  moPadding: "0 20px",
 };
 
 export const GlobalStyled = createGlobalStyle`
