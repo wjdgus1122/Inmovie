@@ -3,6 +3,16 @@ import { movieApi } from "../../../api";
 import { movieNum } from "../../../constants/constant";
 import { Loading } from "../../Loading";
 import { MainBanner } from "./MainBanner";
+import "swiper/css";
+import { Container } from "../../Container";
+import { Movies } from "./Movies";
+import styled from "styled-components";
+
+// const Box = styled.div`
+//   width: 100%;
+//   height: 80%;
+//   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+// `;
 
 export const Home = () => {
   const [playing, setPlaying] = useState();
@@ -47,7 +57,20 @@ export const Home = () => {
       {loading ? (
         <Loading />
       ) : (
-        <>{playing && <MainBanner playData={playing[movieNum]} />}</>
+        <>
+          {playing && (
+            <>
+              {/* <Box> */}
+              <MainBanner playData={playing[movieNum]} />
+              {/* </Box> */}
+              <Container>
+                <Movies movieData={playing} title="현재 상영 영화" />
+                <Movies movieData={rated} title="인기 영화" />
+                <Movies movieData={upcome} title="개봉 예정 영화" />
+              </Container>
+            </>
+          )}
+        </>
       )}
     </>
   );
