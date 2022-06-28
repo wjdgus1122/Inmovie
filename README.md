@@ -12,6 +12,7 @@
 - [x] Container
 - [x] Header Responsive
 - [ ] Main Container Responsive
+- [ ] 404 Image
 
 ## Main page
 
