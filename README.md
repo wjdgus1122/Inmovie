@@ -12,7 +12,6 @@
 - [x] Container
 - [x] Header Responsive
 - [ ] Main Container Responsive
-- [ ] 404 Image
 
 ## Main page
 
@@ -20,8 +19,9 @@
 - [x] try catch
 - [x] Loading
 - [x] Slide
-- [ ] Slide Link
-- [ ] Slide Navigation
+- [x] Slide Link
+- [x] Slide Navigation
+- [ ] 404 Image
 - [ ] Header Event
 
 ## Detail page

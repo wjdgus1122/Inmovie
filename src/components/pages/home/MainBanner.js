@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { imgUrl } from "../../../constants/constant";
 import { mainStyle } from "../../../styles/globalStyle";
 
@@ -10,6 +10,9 @@ const Banner = styled.section`
   width: 100%;
   height: 80vh;
   position: relative;
+  @media screen and (max-width: 500px) {
+    height: 100vh;
+  }
 `;
 
 const Box = styled.div`
@@ -18,9 +21,6 @@ const Box = styled.div`
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   padding: ${mainStyle.padding};
   padding-top: 250px;
-  @media screen and (max-width: 500px) {
-    height: 100vh;
-  }
 `;
 
 const Title = styled.div`

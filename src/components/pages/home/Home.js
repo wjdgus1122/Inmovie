@@ -6,7 +6,6 @@ import { MainBanner } from "./MainBanner";
 import "swiper/css";
 import { Container } from "../../Container";
 import { Movies } from "./Movies";
-import styled from "styled-components";
 
 // const Box = styled.div`
 //   width: 100%;

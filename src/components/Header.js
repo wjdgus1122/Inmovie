@@ -75,10 +75,10 @@ export const Header = () => {
         <FontAwesomeIcon icon={faBars} onClick={MenuClick} />
       </SHeader>
       <MenuWrap po={posi}>
-        <Menu>
+        <Menu onClick={MenuClick}>
           <Link to={"/"}>Home</Link>
         </Menu>
-        <Menu>
+        <Menu onClick={MenuClick}>
           <Link to={"/search"}>Search</Link>
         </Menu>
       </MenuWrap>
