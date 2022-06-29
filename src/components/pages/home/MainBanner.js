@@ -7,12 +7,19 @@ import { mainStyle } from "../../../styles/globalStyle";
 // @media screen and (max-width : ) and (min-width:)
 
 const Banner = styled.section`
+  width: 100%;
   height: 80vh;
+  position: relative;
+`;
+
+const Box = styled.div`
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
   padding: ${mainStyle.padding};
   padding-top: 250px;
   @media screen and (max-width: 500px) {
     height: 100vh;
-    position: relative;
   }
 `;
 
@@ -50,8 +57,10 @@ export const MainBanner = ({ playData }) => {
         background: `url(${imgUrl}${playData.backdrop_path}) no-repeat center/cover`,
       }}
     >
-      <Title> {playData.title}</Title>
-      <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
+      <Box>
+        <Title> {playData.title}</Title>
+        <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
+      </Box>
     </Banner>
   );
 };
