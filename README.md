@@ -21,7 +21,7 @@
 - [x] Slide
 - [x] Slide Link
 - [x] Slide Navigation
-- [ ] 404 Image
+- [x] 404 Image
 - [ ] Header Event
 
 ## Detail page
