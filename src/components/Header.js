@@ -13,6 +13,8 @@ const SHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: ${(props) => props.bgColor};
+  transition: 0.5s;
   position: fixed;
   top: 0;
   left: 0;
@@ -22,6 +24,7 @@ const SHeader = styled.div`
   }
   svg {
     font-size: 25px;
+    cursor: pointer;
   }
 `;
 const Logo = styled.h3`
@@ -37,7 +40,7 @@ const Logo = styled.h3`
 const MenuWrap = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: gray;
+  background-color: #1d1d1d;
   position: fixed;
   right: ${(props) => props.po};
   transition: 1s;
@@ -57,7 +60,16 @@ const Menu = styled.h3`
 `;
 
 export const Header = () => {
+  const [bg, setBg] = useState("transparent");
   const [posi, setPosi] = useState("-100%");
+  const handelHeader = () => {
+    const sct = window.pageYOffset;
+    if (sct > 400) {
+      setBg("#1d1d1d");
+    } else {
+      setBg("transparent");
+    }
+  };
   const MenuClick = () => {
     if (posi === "-100%") {
       setPosi("0");
@@ -65,9 +77,10 @@ export const Header = () => {
       setPosi("-100%");
     }
   };
+  window.addEventListener("scroll", handelHeader);
   return (
     <>
-      <SHeader>
+      <SHeader bgColor={bg}>
         <Logo>
           <Link to={"/"}>INMOIVE</Link>
         </Logo>
