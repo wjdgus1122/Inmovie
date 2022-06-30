@@ -79,8 +79,8 @@ export const Detail = () => {
             <MainPoster
               style={{
                 background: `url(${
-                  dt.poster_path
-                    ? `${imgUrl}${dt.poster_path}`
+                  dt.backdrop_path
+                    ? `${imgUrl}${dt.backdrop_path}`
                     : `https://1080motion.com/wp-content/uploads/2018/06/NoImageFound.jpg.png`
                 }) no-repeat center/cover`,
               }}
