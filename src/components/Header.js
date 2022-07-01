@@ -52,7 +52,12 @@ const Menu = styled.li`
   }
 `;
 
-const MoMenu = styled.div``;
+const MoMenu = styled.div`
+  display: none;
+  @media screen and (max-width: 500px) {
+    display: block;
+  }
+`;
 
 const MoMenuWrap = styled.ul`
   width: 100%;
