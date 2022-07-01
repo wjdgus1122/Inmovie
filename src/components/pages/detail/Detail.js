@@ -5,6 +5,7 @@ import { useParams } from "react-router";
 import { Container } from "../../Container";
 import styled from "styled-components";
 import { Loading } from "../../Loading";
+import { ScrollTop } from "../../../ScrollTop";
 
 const Wrap = styled.section`
   margin-top: 100px;
@@ -103,6 +104,7 @@ export const Detail = () => {
 
   return (
     <>
+      <ScrollTop />
       {loading ? (
         <Loading />
       ) : (
