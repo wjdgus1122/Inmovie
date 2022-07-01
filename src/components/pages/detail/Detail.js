@@ -7,11 +7,16 @@ import { ScrollTop } from "../../../ScrollTop";
 import { MovieDetail } from "./MovieDetail";
 import styled from "styled-components";
 import { videoUrl } from "../../../constants/constant";
+import { PageTitle } from "../../PageTitle";
 
 const Iframe = styled.iframe`
   width: 100%;
   height: 700px;
   margin-top: 150px;
+  @media screen and (max-width: 500px) {
+    height: 60vh;
+    margin-top: 100px;
+  }
 `;
 
 export const Detail = () => {
@@ -35,9 +40,10 @@ export const Detail = () => {
     };
     mvdetail();
   }, []);
-  // console.log(videoData);
+  console.log(dt);
   return (
     <>
+      <PageTitle title={"Detail"} />
       <ScrollTop />
       {loading ? (
         <Loading />

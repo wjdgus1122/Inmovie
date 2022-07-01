@@ -10,17 +10,21 @@ const Banner = styled.section`
   width: 100%;
   height: 80vh;
   position: relative;
+  padding: ${mainStyle.padding};
+  padding-top: 250px;
   @media screen and (max-width: 500px) {
     height: 100vh;
+    padding: ${mainStyle.moPadding};
   }
 `;
 
 const Box = styled.div`
   width: 100%;
-  height: 100%;
+  height: 60%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-  padding: ${mainStyle.padding};
-  padding-top: 250px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 `;
 
 const Title = styled.div`
@@ -29,6 +33,8 @@ const Title = styled.div`
   font-size: 80px;
   font-weight: 700;
   line-height: 6rem;
+  position: relative;
+  z-index: 9;
   @media screen and (max-width: 500px) {
     font-size: 40px;
     line-height: 3rem;
@@ -57,10 +63,9 @@ export const MainBanner = ({ playData }) => {
         background: `url(${imgUrl}${playData.backdrop_path}) no-repeat center/cover`,
       }}
     >
-      <Box>
-        <Title> {playData.title}</Title>
-        <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
-      </Box>
+      <Title> {playData.title}</Title>
+      <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
+      <Box />
     </Banner>
   );
 };

@@ -6,6 +6,7 @@ import { MainBanner } from "./MainBanner";
 import "swiper/css";
 import { Container } from "../../Container";
 import { Movies } from "./Movies";
+import { PageTitle } from "../../PageTitle";
 
 // const Box = styled.div`
 //   width: 100%;
@@ -53,6 +54,7 @@ export const Home = () => {
   // console.log("상영예정 영화:", upcome);
   return (
     <>
+      <PageTitle title={"Home"} />
       {loading ? (
         <Loading />
       ) : (
