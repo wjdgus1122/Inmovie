@@ -29,7 +29,7 @@
 - [x] Link
 - [x] Responsive
 - [x] Scroll error
-- [ ] Video
+- [x] Video
 
 ## Search page
 
