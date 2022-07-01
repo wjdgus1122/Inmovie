@@ -43,7 +43,8 @@ export const Detail = () => {
   console.log(dt);
   return (
     <>
-      <PageTitle title={"Detail"} />
+      {/* {console.log(dt && dt.title)} */}
+      {dt && <PageTitle title={dt.title} />}
       <ScrollTop />
       {loading ? (
         <Loading />
