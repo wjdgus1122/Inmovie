@@ -25,4 +25,7 @@ export const GlobalStyled = createGlobalStyle`
         text-decoration: none;
         color: ${mainStyle.color};
     }
+    li{
+        list-style: none;
+    }
 `;

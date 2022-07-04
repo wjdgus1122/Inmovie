@@ -1,3 +1,5 @@
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styled from "styled-components";
 import { imgUrl } from "../../../constants/constant";
 
@@ -7,6 +9,7 @@ const Wrap = styled.section`
   justify-content: space-between;
   @media screen and (max-width: 500px) {
     display: block;
+    position: relative;
   }
 `;
 const MainPoster = styled.div`
@@ -44,8 +47,8 @@ const Date = styled.div`
 `;
 const Genres = styled.div`
   margin-top: 20px;
+  display: flex;
   li {
-    list-style: disc;
     margin-bottom: 5px;
   }
   @media screen and (max-width: 500px) {
@@ -76,8 +79,43 @@ const Text = styled.div`
     margin: 20px 0;
   }
 `;
+const Btn = styled.div`
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  cursor: pointer;
+  @media screen and (max-width: 500px) {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 87vh;
+    right: 0;
+    font-size: 15px;
+  }
+`;
 
-export const MovieDetail = ({ dt }) => {
+export const MovieDetail = ({ dt, video }) => {
+  const ScrollHandle = () => {
+    const wid = window.innerWidth;
+    if (wid > 1000) {
+      window.scrollTo({
+        top: 800,
+        behavior: "smooth",
+      });
+    } else {
+      window.scrollTo({
+        top: 1200,
+        behavior: "smooth",
+      });
+    }
+  };
+  const he = window.outerHeight;
+  console.log(he);
   return (
     <Wrap>
       <MainPoster
@@ -96,11 +134,18 @@ export const MovieDetail = ({ dt }) => {
           <MovieTime>{dt.runtime}분</MovieTime>
           <Genres>
             {dt.genres.map((genre) => (
-              <li key={genre.id}>{genre.name}</li>
+              <li key={genre.id}>{genre.name}/</li>
             ))}
           </Genres>
         </SWrap>
         <Text>{dt.overview}</Text>
+        {video && (
+          <>
+            <Btn onClick={ScrollHandle}>
+              예고보기 <FontAwesomeIcon icon={faAngleRight} />
+            </Btn>
+          </>
+        )}
       </TextWrap>
     </Wrap>
   );

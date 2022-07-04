@@ -50,7 +50,7 @@ export const Detail = () => {
         <Loading />
       ) : (
         <Container>
-          {dt && <MovieDetail dt={dt} />}
+          {dt && <MovieDetail dt={dt} video={videoData} />}
           {videoData ? (
             <Iframe src={`${videoUrl}${videoData}`} allowfullscreen></Iframe>
           ) : null}

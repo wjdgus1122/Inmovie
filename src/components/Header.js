@@ -97,11 +97,20 @@ export const Header = () => {
   const [bg, setBg] = useState("transparent");
   const [left, setLeft] = useState("100%");
   const handelHeader = () => {
+    const wid = window.innerWidth;
     const sct = window.pageYOffset;
-    if (sct > 400) {
-      setBg("#1d1d1d");
+    if (wid > 1000) {
+      if (sct > 400) {
+        setBg("#1d1d1d");
+      } else {
+        setBg("transparent");
+      }
     } else {
-      setBg("transparent");
+      if (sct > 200) {
+        setBg("#1d1d1d");
+      } else {
+        setBg("transparent");
+      }
     }
   };
   window.addEventListener("scroll", handelHeader);

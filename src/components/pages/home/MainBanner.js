@@ -1,6 +1,9 @@
 import styled from "styled-components";
 import { imgUrl } from "../../../constants/constant";
 import { mainStyle } from "../../../styles/globalStyle";
+import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 // 반응형?
 // =>각 디바이스 기기에 따라 디자인이 변경되도록 구현하는것
@@ -55,8 +58,24 @@ const Desc = styled.div`
     display: none;
   }
 `;
+const GoBtn = styled.div`
+  width: 150px;
+  height: 50px;
+  font-size: 20px;
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+  z-index: 99;
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+`;
 
 export const MainBanner = ({ playData }) => {
+  console.log(playData.id);
   return (
     <Banner
       style={{
@@ -65,6 +84,11 @@ export const MainBanner = ({ playData }) => {
     >
       <Title> {playData.title}</Title>
       <Desc>{playData.overview.slice(0, 100) + "..."}</Desc>
+      <Link to={`/detail/${playData.id}`}>
+        <GoBtn>
+          바로가기 <FontAwesomeIcon icon={faAngleRight} />
+        </GoBtn>
+      </Link>
       <Box />
     </Banner>
   );

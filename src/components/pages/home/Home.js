@@ -7,6 +7,7 @@ import "swiper/css";
 import { Container } from "../../Container";
 import { Movies } from "./Movies";
 import { PageTitle } from "../../PageTitle";
+import { useParams } from "react-router";
 
 // const Box = styled.div`
 //   width: 100%;
