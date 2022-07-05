@@ -142,7 +142,7 @@ export const MovieDetail = ({ dt, video }) => {
         {video && (
           <>
             <Btn onClick={ScrollHandle}>
-              예고보기 <FontAwesomeIcon icon={faAngleRight} />
+              예고편보기 <FontAwesomeIcon icon={faAngleRight} />
             </Btn>
           </>
         )}

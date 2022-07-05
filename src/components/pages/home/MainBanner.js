@@ -68,7 +68,7 @@ const GoBtn = styled.div`
   align-items: center;
   margin-top: 20px;
   position: relative;
-  z-index: 99;
+  z-index: 2;
   @media screen and (max-width: 500px) {
     display: none;
   }
