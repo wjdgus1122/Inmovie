@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Inmovie/static/css/main.9bf80ff5.css",
+    "main.js": "/Inmovie/static/js/main.a5166104.js",
+    "index.html": "/Inmovie/index.html",
+    "main.9bf80ff5.css.map": "/Inmovie/static/css/main.9bf80ff5.css.map",
+    "main.a5166104.js.map": "/Inmovie/static/js/main.a5166104.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9bf80ff5.css",
+    "static/js/main.a5166104.js"
+  ]
+}
